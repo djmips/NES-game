@@ -55,16 +55,14 @@ _init:
     dex
     bne :-
     
-    ; TODO: clear PPU memory and init other NES related registers
+    ; TODO: clear PPU memory(+sprites) and init other NES related registers
     ;       to known values
     
     ; copy initialized zero page data over from __ZEROPAGE_LOAD__ to
     ; __ZEROPAGE_RUN__    
     lda #<__ZEROPAGE_SIZE__
-    bne :+
-    lda #>__ZEROPAGE_SIZE__
+    ora #>__ZEROPAGE_SIZE__
     beq no_zp_data
-:
     ldx #0
 copy_zp:
     lda __ZEROPAGE_LOAD__,x
@@ -118,7 +116,9 @@ trampoline:
 .endmacro
     
 .proc nmi
-    bit $2002 ; acknowledge the NMI
+    ; We don't ack the NMI here (by reading $2002) anymore, because
+    ; we don't want to mess up users PPU writes if the NMI happens
+    ; in the middle of two writes to $2006...
     inc __nmi_count
     generate_irq_handler user_nmi
 .endproc

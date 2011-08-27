@@ -1,6 +1,6 @@
 KNES library for CC65
 ---------------------
-by thefox // aspekt 2010 :: thefox@aspekt.fi :: http://thefox.aspekt.fi
+by thefox // aspekt 2011 :: thefox@aspekt.fi :: http://thefox.aspekt.fi
 
 This is a replacement NES library for CC65. I have removed bunch of "useless"
 stuff from the default nes.lib and replaced crt0.s with a new version.
@@ -31,3 +31,12 @@ Some tips for programming the NES in C:
     produce broken code. One such case is when you read the controllers by strobing
     $4016, then reading it eight times. The first read is optimized away. Of course
     when you're using this library you can simply use read_joy().
+
+Version history
+---------------
+
+0.1.1
+  Fixed to work with latest development version of CC65.. and some other changes
+  which I can't remember because the project isn't under version control.. duh!
+0.1
+  Initial release

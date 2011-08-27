@@ -1,4 +1,4 @@
-compile_flags  = -l -g -T -Cl -Oirs -I ../knes
+compile_flags  = -g -T -Cl -Oirs -I ../knes
 link_flags     = --lib-path ../knes
 obj            = header.o graphics.o map.o music.o main.o sound.o
 bin            = demo.nes
@@ -12,7 +12,7 @@ sound.o:      sound.c sfx/seamen2.h
 map.o:        map.c map/exported/attrib.h map/exported/map.h map/exported/metatiles.h
 
 %.o: %.s
-	cl65 -v -g -t none -l -c $<
+	cl65 -v -g -t none -c $<
 
 %.o: %.c
 	cl65 -t none $(compile_flags) -c $<

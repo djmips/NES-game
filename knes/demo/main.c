@@ -110,6 +110,9 @@ int main(void)
     
     for(;;) {
         // non-critical code, can safely take more than a single frame (but FPS will drop)
+        
+        // takes around 6K cycles by average
+        // when screen scrolls, about 15K cycles
         update_frame();
         if(!ego_alive) {
             CPU.apu_chn = 0;
@@ -118,10 +121,12 @@ int main(void)
                 TINTRED_OFF|TINTGRN_OFF|TINTBLU_OFF;
             break;
         }
+        // averages around 7.5K cycles
         play_music();
         
         wait_vblank();
         // critical PPU updates
+        // these take 1897 cycles worst case
         OAM_DMA();
         upload_ppu_buffers();
         upload_dynamic_palette();

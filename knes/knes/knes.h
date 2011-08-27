@@ -1,41 +1,51 @@
 #ifndef KNES_H_INCLUDED
 #define KNES_H_INCLUDED
 
-typedef unsigned char   byte;
-typedef unsigned short  word;
-typedef unsigned long   dword;
+typedef unsigned char   u8_t;
+typedef unsigned short  u16_t;
+typedef unsigned long   u32_t;
+typedef   signed char   s8_t;
+typedef   signed short  s16_t;
+typedef   signed long   s32_t;
 
-// this variable is increased in the NMI handler
+typedef u8_t    byte;
+typedef u16_t   word;
+typedef u32_t   dword;
+
+// This variable is increased in the NMI handler.
 extern volatile byte _nmi_count;
-#pragma zpsym("_nmi_count");
+#pragma zpsym( "_nmi_count" );
 #define NMI_COUNT() _nmi_count
 
-// thanks to blargg for the idea, validation was removed
-//   though because CC65 throws a warning when it is used
-// also note that the resulting value is not a byte,
+// Thanks to blargg for the idea, validation was removed
+//   though because CC65 throws a warning when it is used.
+// Also note that the resulting value is not a byte,
 //   which might lead to performance penalties in some cases,
-//   so cast to byte when necessary
-#define __B(n)      ((n       & 0x01) |\
-                     (n >>  2 & 0x02) |\
-                     (n >>  4 & 0x04) |\
-                     (n >>  6 & 0x08) |\
-                     (n >>  8 & 0x10) |\
-                     (n >> 10 & 0x20) |\
-                     (n >> 12 & 0x40) |\
-                     (n >> 14 & 0x80))
+//   so cast to byte when necessary.
+// TODO: Cast to byte, as this can't handle more than 8 bits
+//   anyways
+#define __B(n)      ( (n       & 0x01) |\
+                      (n >>  2 & 0x02) |\
+                      (n >>  4 & 0x04) |\
+                      (n >>  6 & 0x08) |\
+                      (n >>  8 & 0x10) |\
+                      (n >> 10 & 0x20) |\
+                      (n >> 12 & 0x40) |\
+                      (n >> 14 & 0x80) )
 
-// convert a binary number, e.g. _B(10101100)
-#define _B(a)       (__B(0##a))
+// Convert a binary number, e.g. _B(10101100).
+#define _B(a)       ( __B( 0##a ) )
 
-// casts parameter to a byte pointer
-#define _P(a)       ((byte volatile *)(a))
-// returns byte at the specified address
-#define _M(a)       (*_P(a))
+// Casts parameter to a byte pointer.
+#define _P(a)       ( ( byte* )(a) )
+// Returns a reference to a byte at the specified address.
+#define _M(a)       ( *_P( a ) )
 
-#define LOBYTE(a)   ((a) & 0xFF)
-#define HIBYTE(a)   (((a) >> 8) & 0xFF)
+// TODO: Verify that the result from these is a byte, if not, cast
+#define LOBYTE(a)   ( (a) & 0xFF )
+#define HIBYTE(a)   ( ( (a) >> 8 ) & 0xFF )
 
-#define ABS(a)      ((a) >= 0 ? (a) : -(a))
+#define ABS(a)      ( (a) >= 0 ? (a) : -(a) )
 
 enum PPUCtrl {
     BASE_NT0    = _B(00),
@@ -73,6 +83,12 @@ enum PPUMask {
     TINTBLU_ON   = _B(10000000)
 };
 
+enum PPUStatus {
+    SPR_OVERFLOW   = _B(100000),
+    SPR0_HIT       = _B(1000000),
+    VBLANK_STARTED = _B(10000000)
+};
+
 enum JoyState {
     JOY_A        = _B(1),
     JOY_B        = _B(10),
@@ -97,7 +113,7 @@ enum SprAttrib {
     SPRFLIPV_ON  = _B(10000000),
 };
 
-// TODO: enumerate APU sweep/envelope/etc options
+// TODO: Enumerate APU sweep/envelope/etc options.
 
 struct _APUsquare {
     byte vol;
@@ -142,7 +158,7 @@ struct _CPU {
     byte joy1;
     byte joy2;
 };
-#define    CPU         (*(struct _CPU volatile *)0x4000)
+#define    CPU         ( *( struct _CPU volatile * )0x4000 )
 
 struct _PPU {
     byte ctrl;
@@ -154,7 +170,7 @@ struct _PPU {
     byte addr;
     byte data;
 };
-#define    PPU         (*(struct _PPU volatile *)0x2000)
+#define    PPU         ( *( struct _PPU volatile * )0x2000 )
 
 struct ObjAttr {
     byte y;
@@ -162,31 +178,64 @@ struct ObjAttr {
     byte attrib;
     byte x;
 };
-#define    OAM         ((struct ObjAttr *)0x200)
+#define    OAM         ( ( struct ObjAttr * )0x200)
 
-#define PPU_ADDR(a)       { PPU.addr = HIBYTE(a); PPU.addr = LOBYTE(a); }
-#define OAM_DMA()         { CPU.oam_dma = HIBYTE((word)OAM); }
-#define PPU_SCROLL(x,y)   { PPU.scroll = (x); PPU.scroll = (y); }
+#define PPU_ADDR(a)                             \
+{                                               \
+    PPU.addr = HIBYTE( a );                     \
+    PPU.addr = LOBYTE( a );                     \
+}
 
-#define START_VIRTUANES_PROFILING()   { _M(0x401E) = 0; }
-#define END_VIRTUANES_PROFILING()     { _M(0x401F) = 0; }
+#define OAM_DMA()                               \
+{                                               \
+    PPU.oam_addr = 0;                           \
+    CPU.oam_dma = HIBYTE( ( word )OAM );        \
+}
 
-typedef void irq_handler(void);
+#define PPU_SCROLL( x, y )                      \
+{                                               \
+    PPU.scroll = ( x );                         \
+    PPU.scroll = ( y );                         \
+}
 
-// wait for vblank by checking a flag set by the NMI routine
-extern void __fastcall__ wait_vblank(void);
-// wait for vblank by polling the PPU status register (misses frames occasionally)
-extern void __fastcall__ poll_vblank(void);
-// read joystick state
-extern byte __fastcall__ read_joy(byte n);
-// set the irq handler
-// OBS: you have to be very careful if you decide to program the irq handler in C
-extern void __fastcall__ set_irq_handler(irq_handler *irq);
-// set the nmi handler
-extern void __fastcall__ set_nmi_handler(irq_handler *nmi);
-// enable interrupts (CLI)
-extern void __fastcall__ enable_interrupts(void);
-// enable interrupts (SEI)
-extern void __fastcall__ disable_interrupts(void);
+#define START_VIRTUANES_PROFILING()             \
+{                                               \
+    _M( 0x401E ) = 0;                           \
+}
+
+#define END_VIRTUANES_PROFILING()               \
+{                                               \
+    _M( 0x401F ) = 0;                           \
+}
+
+// Start NintendulatorDX cycle counting timer
+#define START_TIMER( timer )                    \
+{                                               \
+    _M( 0x4020 | ( timer & 0xF ) ) = 0;         \
+}
+
+// Stop NintendulatorDX cycle counting timer
+#define STOP_TIMER( timer )                     \
+{                                               \
+    _M( 0x4030 | ( timer & 0xF ) ) = 0;         \
+}
+
+typedef void irq_handler( void );
+
+// Wait for vblank by checking a flag set by the NMI routine.
+extern void __fastcall__ wait_vblank( void );
+// Wait for vblank by polling the PPU status register (misses frames occasionally).
+extern void __fastcall__ poll_vblank( void );
+// Read joystick state.
+extern byte __fastcall__ read_joy( byte n );
+// Set the IRQ handler.
+// OBS: You have to be very careful if you decide to program the IRQ handler in C.
+extern void __fastcall__ set_irq_handler( irq_handler *irq );
+// Set the NMI handler.
+extern void __fastcall__ set_nmi_handler( irq_handler *nmi );
+// Enable interrupts (CLI).
+extern void __fastcall__ enable_interrupts( void );
+// Enable interrupts (SEI).
+extern void __fastcall__ disable_interrupts( void );
 
 #endif //!KNES_H_INCLUDED

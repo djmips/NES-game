@@ -13,86 +13,86 @@ music.o:
     BSS               Offs = 000000   Size = 00003F
     DATA              Offs = 000000   Size = 000026
 main.o:
-    CODE              Offs = 000556   Size = 000EB7
+    CODE              Offs = 000556   Size = 000EC4
     RODATA            Offs = 0019B3   Size = 00013A
     ZEROPAGE          Offs = 000000   Size = 0000C0
 sound.o:
     DPCM              Offs = 000000   Size = 000FE1
-../knes/knes.lib(copydata.o):
-    CODE              Offs = 00140D   Size = 00002D
-../knes/knes.lib(zerobss.o):
-    INIT              Offs = 000000   Size = 000023
 ../knes/knes.lib(add.o):
-    CODE              Offs = 00143A   Size = 00001A
+    CODE              Offs = 00141A   Size = 00001A
 ../knes/knes.lib(addysp.o):
-    CODE              Offs = 001454   Size = 00000E
+    CODE              Offs = 001434   Size = 00000E
 ../knes/knes.lib(aslax2.o):
-    CODE              Offs = 001462   Size = 00000B
+    CODE              Offs = 001442   Size = 00000B
 ../knes/knes.lib(aslax3.o):
-    CODE              Offs = 00146D   Size = 00000E
+    CODE              Offs = 00144D   Size = 00000E
 ../knes/knes.lib(aslax4.o):
-    CODE              Offs = 00147B   Size = 000011
+    CODE              Offs = 00145B   Size = 000011
 ../knes/knes.lib(asrax1.o):
-    CODE              Offs = 00148C   Size = 00000A
+    CODE              Offs = 00146C   Size = 00000A
 ../knes/knes.lib(asrax3.o):
-    CODE              Offs = 001496   Size = 000014
+    CODE              Offs = 001476   Size = 000014
 ../knes/knes.lib(asrax4.o):
-    CODE              Offs = 0014AA   Size = 000019
+    CODE              Offs = 00148A   Size = 000019
 ../knes/knes.lib(axlong.o):
-    CODE              Offs = 0014C3   Size = 000012
+    CODE              Offs = 0014A3   Size = 000012
 ../knes/knes.lib(condes.o):
-    CODE              Offs = 0014D5   Size = 00000C
+    CODE              Offs = 0014B5   Size = 00000C
     DATA              Offs = 000026   Size = 000025
-    INIT              Offs = 000023   Size = 00000C
+    INIT              Offs = 000000   Size = 00000C
 ../knes/knes.lib(decsp4.o):
-    CODE              Offs = 0014E1   Size = 00000D
+    CODE              Offs = 0014C1   Size = 00000D
 ../knes/knes.lib(incsp1.o):
-    CODE              Offs = 0014EE   Size = 000007
+    CODE              Offs = 0014CE   Size = 000007
 ../knes/knes.lib(incsp2.o):
-    CODE              Offs = 0014F5   Size = 000016
+    CODE              Offs = 0014D5   Size = 000016
 ../knes/knes.lib(incsp4.o):
-    CODE              Offs = 00150B   Size = 000005
+    CODE              Offs = 0014EB   Size = 000005
 ../knes/knes.lib(laddeq.o):
-    CODE              Offs = 001510   Size = 00002D
+    CODE              Offs = 0014F0   Size = 00002D
 ../knes/knes.lib(lcmp.o):
-    CODE              Offs = 00153D   Size = 00003B
+    CODE              Offs = 00151D   Size = 00003B
 ../knes/knes.lib(lge.o):
-    CODE              Offs = 001578   Size = 000006
+    CODE              Offs = 001558   Size = 000006
 ../knes/knes.lib(lgt.o):
-    CODE              Offs = 00157E   Size = 000006
+    CODE              Offs = 00155E   Size = 000006
 ../knes/knes.lib(llt.o):
-    CODE              Offs = 001584   Size = 000006
+    CODE              Offs = 001564   Size = 000006
 ../knes/knes.lib(lpush.o):
-    CODE              Offs = 00158A   Size = 00001E
+    CODE              Offs = 00156A   Size = 00001E
 ../knes/knes.lib(lsub.o):
-    CODE              Offs = 0015A8   Size = 000027
+    CODE              Offs = 001588   Size = 000027
 ../knes/knes.lib(makebool.o):
-    CODE              Offs = 0015CF   Size = 000031
+    CODE              Offs = 0015AF   Size = 000031
 ../knes/knes.lib(or.o):
-    CODE              Offs = 001600   Size = 000012
+    CODE              Offs = 0015E0   Size = 000012
 ../knes/knes.lib(pusha.o):
-    CODE              Offs = 001612   Size = 000016
+    CODE              Offs = 0015F2   Size = 000016
 ../knes/knes.lib(pushax.o):
-    CODE              Offs = 001628   Size = 00001A
+    CODE              Offs = 001608   Size = 00001A
 ../knes/knes.lib(shrax1.o):
-    CODE              Offs = 001642   Size = 000008
+    CODE              Offs = 001622   Size = 000008
 ../knes/knes.lib(shrax4.o):
-    CODE              Offs = 00164A   Size = 000011
+    CODE              Offs = 00162A   Size = 000011
 ../knes/knes.lib(staspidx.o):
-    CODE              Offs = 00165B   Size = 000016
+    CODE              Offs = 00163B   Size = 000016
 ../knes/knes.lib(sub.o):
-    CODE              Offs = 001671   Size = 000015
+    CODE              Offs = 001651   Size = 000015
 ../knes/knes.lib(zeropage.o):
     ZEROPAGE          Offs = 0000C0   Size = 00001A
+../knes/knes.lib(copydata.o):
+    CODE              Offs = 001666   Size = 00002D
+../knes/knes.lib(zerobss.o):
+    INIT              Offs = 00000C   Size = 000023
 ../knes/knes.lib(crt0.o):
     ZEROPAGE          Offs = 0000DA   Size = 000005
-    STARTUP           Offs = 000000   Size = 0000A3
+    STARTUP           Offs = 000000   Size = 00009E
     VECTORS           Offs = 000000   Size = 000006
 ../knes/knes.lib(knes.o):
-    CODE              Offs = 001686   Size = 000036
+    CODE              Offs = 001693   Size = 000036
     BSS               Offs = 00003F   Size = 000002
 ../knes/knes.lib(_read_joy.o):
-    CODE              Offs = 0016C0   Size = 000076
+    CODE              Offs = 0016E0   Size = 000076
     ZEROPAGE          Offs = 0000DF   Size = 000003
 
 
@@ -105,10 +105,10 @@ HEADER                000000  000007  000008
 ZEROPAGE              000000  0000E1  0000E2
 DATA                  000300  00034A  00004B
 BSS                   00034B  00038B  000041
-STARTUP               008000  0080A2  0000A3
-INIT                  0080A3  0080D1  00002F
-CODE                  008100  009835  001736
-RODATA                009881  00B36E  001AEE
+STARTUP               008000  00809D  00009E
+INIT                  00809E  0080CC  00002F
+CODE                  008100  009855  001756
+RODATA                0098A1  00B38E  001AEE
 DPCM                  00F000  00FFE0  000FE1
 VECTORS               00FFFA  00FFFF  000006
 
@@ -116,41 +116,41 @@ VECTORS               00FFFA  00FFFF  000006
 Exports list:
 -------------
 __BSS_RUN__               00034B RLA    __BSS_SIZE__              000041 REA    
-__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     00B36F RLA    
-__DATA_LOAD__             009836 RLA    __DATA_RUN__              000300 RLA    
+__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     00B38F RLA    
+__DATA_LOAD__             009856 RLA    __DATA_RUN__              000300 RLA    
 __DATA_SIZE__             00004B REA    __DESTRUCTOR_COUNT__      000000 REA    
-__DESTRUCTOR_TABLE__      00B36F RLA    __RAM_SIZE__              000500 REA    
+__DESTRUCTOR_TABLE__      00B38F RLA    __RAM_SIZE__              000500 REA    
 __RAM_START__             000300 RLA    __STARTUP__               000001 REA    
-__ZEROPAGE_LOAD__         00B36F RLA    __ZEROPAGE_RUN__          000000 RLA    
+__ZEROPAGE_LOAD__         00B38F RLA    __ZEROPAGE_RUN__          000000 RLA    
 __ZEROPAGE_SIZE__         0000E2 REA    __nmi_count               0000DA RLZ    
-__read_joy0               0097F8 RLA    __read_joy1               009817 RLA    
-_gfx_index_logo           009881 RLA    _init_music               008100 RLA    
-_main                     0094AA RLA    _map_exported_attrib      00ABDB RLA    
-_map_exported_map         009C41 RLA    _map_exported_metatiles   00A7DB RLA    
-_play_music               008131 RLA    _read_joy                 0097A1 RLA    
-_wait_vblank              009786 RLA    addysp                    009555 RLA    
-addysp1                   009554 RLA    aslax2                    009562 RLA    
-aslax3                    00956D RLA    aslax4                    00957B RLA    
-asrax1                    00958C RLA    asrax3                    009596 RLA    
-asrax4                    0095AA RLA    axlong                    0095CA RLA    
-boolge                    0096E5 RLA    boolgt                    0096E3 RLA    
-boollt                    0096DD RLA    copydata                  00950D RLA    
-decsp4                    0095E1 RLA    donelib                   0095D5 RLA    
-incsp1                    0095EE RLA    incsp2                    0095FD RLA    
-incsp4                    00960B RLA    initlib                   0080C6 RLA    
-laddeq                    009618 RLA    ptr1                      0000C8 RLZ    
-ptr2                      0000CA RLZ    pusha                     009716 RLA    
-pusha0                    00972A RLA    pushax                    00972C RLA    
-pusheax                   009690 RLA    regsave                   0000C4 RLZ    
-shlax4                    00957B RLA    shrax1                    009742 RLA    
-shrax4                    00974A RLA    sp                        0000C0 RLZ    
-sreg                      0000C2 RLZ    staspidx                  00975B RLA    
-tmp1                      0000D0 RLZ    tosadda0                  00953A RLA    
-tosaddax                  00953C RLA    tosgeeax                  009678 RLA    
-tosgteax                  00967E RLA    toslcmp                   00963D RLA    
-toslteax                  009684 RLA    tosorax                   009702 RLA    
-tossuba0                  009771 RLA    tossubax                  009773 RLA    
-tossubeax                 0096AE RLA    zerobss                   0080A3 RLA    
+__read_joy0               009818 RLA    __read_joy1               009837 RLA    
+_gfx_index_logo           0098A1 RLA    _init_music               008100 RLA    
+_main                     0094AD RLA    _map_exported_attrib      00ABFB RLA    
+_map_exported_map         009C61 RLA    _map_exported_metatiles   00A7FB RLA    
+_play_music               008131 RLA    _read_joy                 0097AE RLA    
+_wait_vblank              009793 RLA    addysp                    009535 RLA    
+addysp1                   009534 RLA    aslax2                    009542 RLA    
+aslax3                    00954D RLA    aslax4                    00955B RLA    
+asrax1                    00956C RLA    asrax3                    009576 RLA    
+asrax4                    00958A RLA    axlong                    0095AA RLA    
+boolge                    0096C5 RLA    boolgt                    0096C3 RLA    
+boollt                    0096BD RLA    copydata                  009766 RLA    
+decsp4                    0095C1 RLA    donelib                   0095B5 RLA    
+incsp1                    0095CE RLA    incsp2                    0095DD RLA    
+incsp4                    0095EB RLA    initlib                   00809E RLA    
+laddeq                    0095F8 RLA    ptr1                      0000C8 RLZ    
+ptr2                      0000CA RLZ    pusha                     0096F6 RLA    
+pusha0                    00970A RLA    pushax                    00970C RLA    
+pusheax                   009670 RLA    regsave                   0000C4 RLZ    
+shlax4                    00955B RLA    shrax1                    009722 RLA    
+shrax4                    00972A RLA    sp                        0000C0 RLZ    
+sreg                      0000C2 RLZ    staspidx                  00973B RLA    
+tmp1                      0000D0 RLZ    tosadda0                  00951A RLA    
+tosaddax                  00951C RLA    tosgeeax                  009658 RLA    
+tosgteax                  00965E RLA    toslcmp                   00961D RLA    
+toslteax                  009664 RLA    tosorax                   0096E2 RLA    
+tossuba0                  009751 RLA    tossubax                  009753 RLA    
+tossubeax                 00968E RLA    zerobss                   0080AA RLA    
 
 
 
@@ -217,28 +217,28 @@ addysp1 (addysp.o):
     or.o                      or.s(8)
     lsub.o                    lsub.s(11)
 aslax2 (aslax2.o):
-    main.o                    main.s(603)
-    main.o                    main.s(2279)
-    music.o                   music.s(1170)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
+    music.o                   music.s(2022)
 aslax3 (aslax3.o):
-    main.o                    main.s(1405)
-    music.o                   music.s(1425)
+    main.o                    main.s(4044)
+    music.o                   music.s(2022)
 aslax4 (aslax4.o):
-    main.o                    main.s(632)
-    main.o                    main.s(2308)
-    music.o                   music.s(1169)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
+    music.o                   music.s(2022)
 asrax1 (asrax1.o):
-    main.o                    main.s(2177)
+    main.o                    main.s(4044)
 asrax3 (asrax3.o):
-    main.o                    main.s(1349)
-    main.o                    main.s(1954)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
 asrax4 (asrax4.o):
-    main.o                    main.s(1348)
-    main.o                    main.s(2176)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
 axlong (axlong.o):
-    main.o                    main.s(1058)
-    main.o                    main.s(1460)
-    main.o                    main.s(1644)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
 boolge (makebool.o):
     lge.o                     lge.s(8)
 boolgt (makebool.o):
@@ -252,8 +252,8 @@ decsp4 (decsp4.o):
 donelib (condes.o):
     crt0.o                    crt0.s(9)
 incsp1 (incsp1.o):
-    knes.o                    knes.s(128)
-    main.o                    main.s(1916)
+    knes.o                    knes.s(193)
+    main.o                    main.s(4044)
 incsp2 (incsp2.o):
     staspidx.o                staspidx.s(8)
 incsp4 (incsp4.o):
@@ -261,11 +261,11 @@ incsp4 (incsp4.o):
 initlib (condes.o):
     crt0.o                    crt0.s(9)
 laddeq (laddeq.o):
-    main.o                    main.s(1648)
+    main.o                    main.s(4044)
 ptr1 (zeropage.o):
-    lcmp.o                    lcmp.s(10)
     zerobss.o                 zerobss.s(9)
     copydata.o                copydata.s(9)
+    lcmp.o                    lcmp.s(10)
     staspidx.o                staspidx.s(9)
     laddeq.o                  laddeq.s(11)
     main.o                    main.s(11)
@@ -273,34 +273,34 @@ ptr1 (zeropage.o):
 ptr2 (zeropage.o):
     copydata.o                copydata.s(9)
 pusha (pusha.o):
-    knes.o                    knes.s(112)
-    main.o                    main.s(1094)
+    knes.o                    knes.s(193)
+    main.o                    main.s(4044)
 pusha0 (pushax.o):
-    main.o                    main.s(582)
-    main.o                    main.s(2287)
-    music.o                   music.s(1428)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
+    music.o                   music.s(2022)
 pushax (pushax.o):
-    main.o                    main.s(2754)
-    main.o                    main.s(3086)
-    music.o                   music.s(1426)
-    music.o                   music.s(1509)
-    music.o                   music.s(1745)
-    music.o                   music.s(1937)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
+    music.o                   music.s(2022)
+    music.o                   music.s(2022)
+    music.o                   music.s(2022)
+    music.o                   music.s(2022)
 pusheax (lpush.o):
-    main.o                    main.s(1000)
-    main.o                    main.s(1457)
-    main.o                    main.s(1666)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
 regsave (zeropage.o):
     main.o                    main.s(10)
     music.o                   music.s(10)
 shlax4 (aslax4.o):
-    main.o                    main.s(2911)
-    main.o                    main.s(3233)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
 shrax1 (shrax1.o):
-    main.o                    main.s(1977)
+    main.o                    main.s(4044)
 shrax4 (shrax4.o):
-    main.o                    main.s(2705)
-    main.o                    main.s(3020)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
 sp (zeropage.o):
     lcmp.o                    lcmp.s(10)
     incsp2.o                  incsp2.s(8)
@@ -327,8 +327,8 @@ sreg (zeropage.o):
     main.o                    main.s(10)
     music.o                   music.s(10)
 staspidx (staspidx.o):
-    music.o                   music.s(1535)
-    music.o                   music.s(1820)
+    music.o                   music.s(2022)
+    music.o                   music.s(2022)
 tmp1 (zeropage.o):
     copydata.o                copydata.s(9)
     staspidx.o                staspidx.s(9)
@@ -343,32 +343,32 @@ tmp1 (zeropage.o):
     aslax2.o                  aslax2.s(8)
     main.o                    main.s(11)
 tosadda0 (add.o):
-    music.o                   music.s(1530)
+    music.o                   music.s(2022)
 tosaddax (add.o):
-    music.o                   music.s(1779)
-    music.o                   music.s(1971)
+    music.o                   music.s(2022)
+    music.o                   music.s(2022)
 tosgeeax (lge.o):
-    main.o                    main.s(1005)
+    main.o                    main.s(4044)
 tosgteax (lgt.o):
-    main.o                    main.s(1059)
+    main.o                    main.s(4044)
 toslcmp (lcmp.o):
     llt.o                     llt.s(8)
     lgt.o                     lgt.s(8)
     lge.o                     lge.s(8)
 toslteax (llt.o):
-    main.o                    main.s(1670)
+    main.o                    main.s(4044)
 tosorax (or.o):
-    main.o                    main.s(604)
-    main.o                    main.s(2309)
-    music.o                   music.s(1432)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
+    music.o                   music.s(2022)
 tossuba0 (sub.o):
-    music.o                   music.s(1431)
+    music.o                   music.s(2022)
 tossubax (sub.o):
-    main.o                    main.s(2762)
-    main.o                    main.s(3090)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
 tossubeax (lsub.o):
-    main.o                    main.s(1093)
-    main.o                    main.s(1461)
+    main.o                    main.s(4044)
+    main.o                    main.s(4044)
 zerobss (zerobss.o):
     crt0.o                    crt0.s(9)
 

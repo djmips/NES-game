@@ -1,4 +1,4 @@
-compile_flags  = -l -g -T -Cl -Oirs
+compile_flags  = -g -T -Cl -Oirs
 
 obj = crt0.o knes.o _read_joy.o
 bin = knes.lib
@@ -9,11 +9,11 @@ unwanted_crap = _scrsize.o cclear.o chline.o clock.o clrscr.o color.o \
 
 $(bin): $(obj)
 	copy original\nes.lib knes.lib
-	ar65 d knes.lib $(unwanted_crap)
-	ar65 a knes.lib $^
+	ar65 d $@ $(unwanted_crap)
+	ar65 a $@ $^
     
 %.o: %.s
-	cl65 -v -g -t none -l -c $<
+	cl65 -v -g -t none -c $<
 	
 %.o: %.c
 	cl65 -t none $(compile_flags) -c $<
