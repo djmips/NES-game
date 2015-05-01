@@ -8,7 +8,7 @@ unwanted_crap = _scrsize.o cclear.o chline.o clock.o clrscr.o color.o \
 	wherex.o wherey.o \
 
 $(bin): $(obj)
-	copy original\nes.lib knes.lib
+	cp original\nes.lib knes.lib
 	ar65 d $@ $(unwanted_crap)
 	ar65 a $@ $^
     
