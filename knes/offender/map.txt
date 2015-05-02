@@ -1,0 +1,414 @@
+Modules list:
+-------------
+header.o:
+    HEADER            Offs=000000  Size=000008  Align=00001  Fill=0000
+graphics.o:
+    RODATA            Offs=000000  Size=0003C0  Align=00001  Fill=0000
+    CHR               Offs=000000  Size=002000  Align=00001  Fill=0000
+map.o:
+    RODATA            Offs=0003C0  Size=00109A  Align=00001  Fill=0000
+music.o:
+    CODE              Offs=000000  Size=000544  Align=00001  Fill=0000
+    RODATA            Offs=00145A  Size=000559  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=00003F  Align=00001  Fill=0000
+    DATA              Offs=000000  Size=000026  Align=00001  Fill=0000
+main.o:
+    CODE              Offs=000544  Size=000EB7  Align=00001  Fill=0000
+    RODATA            Offs=0019B3  Size=000172  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000088  Align=00001  Fill=0000
+sound.o:
+    DPCM              Offs=000000  Size=000FE1  Align=00001  Fill=0000
+../knes/knes.lib(add.o):
+    CODE              Offs=0013FB  Size=00001A  Align=00001  Fill=0000
+../knes/knes.lib(addysp.o):
+    CODE              Offs=001415  Size=00000E  Align=00001  Fill=0000
+../knes/knes.lib(aslax2.o):
+    CODE              Offs=001423  Size=00000B  Align=00001  Fill=0000
+../knes/knes.lib(aslax3.o):
+    CODE              Offs=00142E  Size=00000E  Align=00001  Fill=0000
+../knes/knes.lib(aslax4.o):
+    CODE              Offs=00143C  Size=000011  Align=00001  Fill=0000
+../knes/knes.lib(asrax3.o):
+    CODE              Offs=00144D  Size=000014  Align=00001  Fill=0000
+../knes/knes.lib(asrax4.o):
+    CODE              Offs=001461  Size=000019  Align=00001  Fill=0000
+../knes/knes.lib(axlong.o):
+    CODE              Offs=00147A  Size=000012  Align=00001  Fill=0000
+../knes/knes.lib(condes.o):
+    CODE              Offs=00148C  Size=00000C  Align=00001  Fill=0000
+    DATA              Offs=000026  Size=000025  Align=00001  Fill=0000
+    INIT              Offs=000000  Size=00000C  Align=00001  Fill=0000
+../knes/knes.lib(copydata.o):
+    CODE              Offs=001498  Size=00002D  Align=00001  Fill=0000
+../knes/knes.lib(decsp4.o):
+    CODE              Offs=0014C5  Size=00000D  Align=00001  Fill=0000
+../knes/knes.lib(incsp1.o):
+    CODE              Offs=0014D2  Size=000007  Align=00001  Fill=0000
+../knes/knes.lib(incsp2.o):
+    CODE              Offs=0014D9  Size=000016  Align=00001  Fill=0000
+../knes/knes.lib(incsp4.o):
+    CODE              Offs=0014EF  Size=000005  Align=00001  Fill=0000
+../knes/knes.lib(laddeq.o):
+    CODE              Offs=0014F4  Size=00002D  Align=00001  Fill=0000
+../knes/knes.lib(lcmp.o):
+    CODE              Offs=001521  Size=00003B  Align=00001  Fill=0000
+../knes/knes.lib(lge.o):
+    CODE              Offs=00155C  Size=000006  Align=00001  Fill=0000
+../knes/knes.lib(lgt.o):
+    CODE              Offs=001562  Size=000006  Align=00001  Fill=0000
+../knes/knes.lib(llt.o):
+    CODE              Offs=001568  Size=000006  Align=00001  Fill=0000
+../knes/knes.lib(lpush.o):
+    CODE              Offs=00156E  Size=000021  Align=00001  Fill=0000
+../knes/knes.lib(lsub.o):
+    CODE              Offs=00158F  Size=000027  Align=00001  Fill=0000
+../knes/knes.lib(makebool.o):
+    CODE              Offs=0015B6  Size=000031  Align=00001  Fill=0000
+../knes/knes.lib(or.o):
+    CODE              Offs=0015E7  Size=000012  Align=00001  Fill=0000
+../knes/knes.lib(pusha.o):
+    CODE              Offs=0015F9  Size=000016  Align=00001  Fill=0000
+../knes/knes.lib(pushax.o):
+    CODE              Offs=00160F  Size=00001A  Align=00001  Fill=0000
+../knes/knes.lib(shrax1.o):
+    CODE              Offs=001629  Size=000008  Align=00001  Fill=0000
+../knes/knes.lib(shrax4.o):
+    CODE              Offs=001631  Size=000011  Align=00001  Fill=0000
+../knes/knes.lib(staspidx.o):
+    CODE              Offs=001642  Size=000016  Align=00001  Fill=0000
+../knes/knes.lib(staxspi.o):
+    CODE              Offs=001658  Size=00001B  Align=00001  Fill=0000
+../knes/knes.lib(sub.o):
+    CODE              Offs=001673  Size=000015  Align=00001  Fill=0000
+../knes/knes.lib(zerobss.o):
+    INIT              Offs=00000C  Size=000023  Align=00001  Fill=0000
+../knes/knes.lib(zeropage.o):
+    ZEROPAGE          Offs=000088  Size=00001A  Align=00001  Fill=0000
+../knes/knes.lib(crt0.o):
+    ZEROPAGE          Offs=0000A2  Size=000005  Align=00001  Fill=0000
+    STARTUP           Offs=000000  Size=00009E  Align=00001  Fill=0000
+    VECTORS           Offs=000000  Size=000006  Align=00001  Fill=0000
+../knes/knes.lib(knes.o):
+    CODE              Offs=001688  Size=000036  Align=00001  Fill=0000
+    BSS               Offs=00003F  Size=000002  Align=00001  Fill=0000
+../knes/knes.lib(_read_joy.o):
+    CODE              Offs=0016C0  Size=000076  Align=00020  Fill=0002
+    ZEROPAGE          Offs=0000A7  Size=000003  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+CHR                   000000  001FFF  002000  00001
+HEADER                000000  000007  000008  00001
+ZEROPAGE              000000  0000A9  0000AA  00001
+DATA                  000300  00034A  00004B  00001
+BSS                   00034B  00038B  000041  00001
+STARTUP               008000  00809D  00009E  00001
+INIT                  00809E  0080CC  00002F  00001
+CODE                  008100  009835  001736  00020
+RODATA                009881  00B3A5  001B25  00001
+DPCM                  00F000  00FFE0  000FE1  00001
+VECTORS               00FFFA  00FFFF  000006  00001
+
+
+Exports list by name:
+---------------------
+__BSS_RUN__               00034B RLA    __BSS_SIZE__              000041 REA    
+__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     00B3A6 RLA    
+__DATA_LOAD__             009836 RLA    __DATA_RUN__              000300 RLA    
+__DATA_SIZE__             00004B REA    __DESTRUCTOR_COUNT__      000000 REA    
+__DESTRUCTOR_TABLE__      00B3A6 RLA    __RAM_SIZE__              000500 REA    
+__RAM_START__             000300 RLA    __STARTUP__               000001 REA    
+__ZEROPAGE_LOAD__         00B3A6 RLA    __ZEROPAGE_RUN__          000000 RLA    
+__ZEROPAGE_SIZE__         0000AA REA    __nmi_count               0000A2 RLZ    
+__read_joy0               0097F8 RLA    __read_joy1               009817 RLA    
+_gfx_index_logo           009881 RLA    _init_music               008100 RLA    
+_main                     00948E RLA    _map_exported_attrib      00ABDB RLA    
+_map_exported_map         009C41 RLA    _map_exported_metatiles   00A7DB RLA    
+_play_music               008131 RLA    _read_joy                 0097A3 RLA    
+_wait_vblank              009788 RLA    addysp                    009516 RLA    
+addysp1                   009515 RLA    aslax2                    009523 RLA    
+aslax3                    00952E RLA    aslax4                    00953C RLA    
+asrax3                    00954D RLA    asrax4                    009561 RLA    
+axlong                    009581 RLA    boolge                    0096CC RLA    
+boolgt                    0096CA RLA    boollt                    0096C4 RLA    
+copydata                  009598 RLA    decsp4                    0095C5 RLA    
+donelib                   00958C RLA    incsp1                    0095D2 RLA    
+incsp2                    0095E1 RLA    incsp4                    0095EF RLA    
+initlib                   00809E RLA    laddeq                    0095FC RLA    
+ptr1                      000090 RLZ    ptr2                      000092 RLZ    
+pusha                     0096FD RLA    pusha0                    009711 RLA    
+pushax                    009713 RLA    pusheax                   009677 RLA    
+regsave                   00008C RLZ    shlax4                    00953C RLA    
+shrax1                    009729 RLA    shrax4                    009731 RLA    
+sp                        000088 RLZ    sreg                      00008A RLZ    
+staspidx                  009742 RLA    staxspidx                 009758 RLA    
+tmp1                      000098 RLZ    tosadda0                  0094FB RLA    
+tosaddax                  0094FD RLA    tosgeeax                  00965C RLA    
+tosgteax                  009662 RLA    toslcmp                   009621 RLA    
+toslteax                  009668 RLA    tosorax                   0096E9 RLA    
+tossuba0                  009773 RLA    tossubax                  009775 RLA    
+tossubeax                 009695 RLA    zerobss                   0080AA RLA    
+
+
+
+Exports list by value:
+----------------------
+__DESTRUCTOR_COUNT__      000000 REA    __CONSTRUCTOR_COUNT__     000000 REA    
+__ZEROPAGE_RUN__          000000 RLA    __STARTUP__               000001 REA    
+__BSS_SIZE__              000041 REA    __DATA_SIZE__             00004B REA    
+sp                        000088 RLZ    sreg                      00008A RLZ    
+regsave                   00008C RLZ    ptr1                      000090 RLZ    
+ptr2                      000092 RLZ    tmp1                      000098 RLZ    
+__nmi_count               0000A2 RLZ    __ZEROPAGE_SIZE__         0000AA REA    
+__RAM_START__             000300 RLA    __DATA_RUN__              000300 RLA    
+__BSS_RUN__               00034B RLA    __RAM_SIZE__              000500 REA    
+initlib                   00809E RLA    zerobss                   0080AA RLA    
+_init_music               008100 RLA    _play_music               008131 RLA    
+_main                     00948E RLA    tosadda0                  0094FB RLA    
+tosaddax                  0094FD RLA    addysp1                   009515 RLA    
+addysp                    009516 RLA    aslax2                    009523 RLA    
+aslax3                    00952E RLA    shlax4                    00953C RLA    
+aslax4                    00953C RLA    asrax3                    00954D RLA    
+asrax4                    009561 RLA    axlong                    009581 RLA    
+donelib                   00958C RLA    copydata                  009598 RLA    
+decsp4                    0095C5 RLA    incsp1                    0095D2 RLA    
+incsp2                    0095E1 RLA    incsp4                    0095EF RLA    
+laddeq                    0095FC RLA    toslcmp                   009621 RLA    
+tosgeeax                  00965C RLA    tosgteax                  009662 RLA    
+toslteax                  009668 RLA    pusheax                   009677 RLA    
+tossubeax                 009695 RLA    boollt                    0096C4 RLA    
+boolgt                    0096CA RLA    boolge                    0096CC RLA    
+tosorax                   0096E9 RLA    pusha                     0096FD RLA    
+pusha0                    009711 RLA    pushax                    009713 RLA    
+shrax1                    009729 RLA    shrax4                    009731 RLA    
+staspidx                  009742 RLA    staxspidx                 009758 RLA    
+tossuba0                  009773 RLA    tossubax                  009775 RLA    
+_wait_vblank              009788 RLA    _read_joy                 0097A3 RLA    
+__read_joy0               0097F8 RLA    __read_joy1               009817 RLA    
+__DATA_LOAD__             009836 RLA    _gfx_index_logo           009881 RLA    
+_map_exported_map         009C41 RLA    _map_exported_metatiles   00A7DB RLA    
+_map_exported_attrib      00ABDB RLA    __DESTRUCTOR_TABLE__      00B3A6 RLA    
+__ZEROPAGE_LOAD__         00B3A6 RLA    __CONSTRUCTOR_TABLE__     00B3A6 RLA    
+
+
+
+Imports list:
+-------------
+__BSS_RUN__ ([linker generated]):
+    zerobss.o                 common/zerobss.s(8)
+__BSS_SIZE__ ([linker generated]):
+    zerobss.o                 common/zerobss.s(8)
+__CONSTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s(18)
+__CONSTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s(18)
+__DATA_LOAD__ ([linker generated]):
+    copydata.o                common/copydata.s(8)
+__DATA_RUN__ ([linker generated]):
+    copydata.o                common/copydata.s(8)
+__DATA_SIZE__ ([linker generated]):
+    copydata.o                common/copydata.s(8)
+__DESTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s(19)
+__DESTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s(19)
+__RAM_SIZE__ ([linker generated]):
+    crt0.o                    crt0.s(5)
+__RAM_START__ ([linker generated]):
+    crt0.o                    crt0.s(5)
+__STARTUP__ (crt0.o):
+    main.o                    main.s(18)
+__ZEROPAGE_LOAD__ ([linker generated]):
+    crt0.o                    crt0.s(7)
+__ZEROPAGE_RUN__ ([linker generated]):
+    crt0.o                    crt0.s(7)
+__ZEROPAGE_SIZE__ ([linker generated]):
+    crt0.o                    crt0.s(7)
+__nmi_count (crt0.o):
+    knes.o                    knes.s(18)
+__read_joy0 (_read_joy.o):
+    knes.o                    knes.s(24)
+__read_joy1 (_read_joy.o):
+    knes.o                    knes.s(25)
+_gfx_index_logo (graphics.o):
+    main.o                    main.s(29)
+_init_music (music.o):
+    main.o                    main.s(33)
+_main (main.o):
+    crt0.o                    crt0.s(2)
+_map_exported_attrib (map.o):
+    main.o                    main.s(32)
+_map_exported_map (map.o):
+    main.o                    main.s(30)
+_map_exported_metatiles (map.o):
+    main.o                    main.s(31)
+_play_music (music.o):
+    main.o                    main.s(34)
+_read_joy (knes.o):
+    main.o                    main.s(28)
+_wait_vblank (knes.o):
+    main.o                    main.s(27)
+addysp (addysp.o):
+    incsp4.o                  runtime/incsp4.s(8)
+addysp1 (addysp.o):
+    sub.o                     runtime/sub.s(8)
+    or.o                      runtime/or.s(8)
+    lsub.o                    runtime/lsub.s(11)
+aslax2 (aslax2.o):
+    main.o                    main.s(4013)
+aslax3 (aslax3.o):
+    main.o                    main.s(4013)
+    music.o                   music.s(2008)
+aslax4 (aslax4.o):
+    main.o                    main.s(4013)
+    main.o                    main.s(4013)
+    music.o                   music.s(2008)
+asrax3 (asrax3.o):
+    main.o                    main.s(4013)
+asrax4 (asrax4.o):
+    main.o                    main.s(4013)
+axlong (axlong.o):
+    main.o                    main.s(4013)
+    main.o                    main.s(4013)
+    main.o                    main.s(4013)
+boolge (makebool.o):
+    lge.o                     runtime/lge.s(8)
+boolgt (makebool.o):
+    lgt.o                     runtime/lgt.s(8)
+boollt (makebool.o):
+    llt.o                     runtime/llt.s(8)
+copydata (copydata.o):
+    crt0.o                    crt0.s(9)
+decsp4 (decsp4.o):
+    lpush.o                   runtime/lpush.s(11)
+donelib (condes.o):
+    crt0.o                    crt0.s(9)
+incsp1 (incsp1.o):
+    knes.o                    knes.s(194)
+    main.o                    main.s(4013)
+incsp2 (incsp2.o):
+    staxspi.o                 runtime/staxspi.s(8)
+    staspidx.o                runtime/staspidx.s(8)
+incsp4 (incsp4.o):
+    lcmp.o                    runtime/lcmp.s(9)
+initlib (condes.o):
+    crt0.o                    crt0.s(9)
+laddeq (laddeq.o):
+    main.o                    main.s(4013)
+ptr1 (zeropage.o):
+    zerobss.o                 common/zerobss.s(9)
+    lcmp.o                    runtime/lcmp.s(10)
+    copydata.o                common/copydata.s(9)
+    staxspi.o                 runtime/staxspi.s(9)
+    staspidx.o                runtime/staspidx.s(9)
+    laddeq.o                  runtime/laddeq.s(11)
+    main.o                    main.s(11)
+    music.o                   music.s(11)
+ptr2 (zeropage.o):
+    copydata.o                common/copydata.s(9)
+pusha (pusha.o):
+    knes.o                    knes.s(194)
+    main.o                    main.s(4013)
+pusha0 (pushax.o):
+    main.o                    main.s(4013)
+    main.o                    main.s(4013)
+    music.o                   music.s(2008)
+pushax (pushax.o):
+    main.o                    main.s(4013)
+    main.o                    main.s(4013)
+    music.o                   music.s(2008)
+    music.o                   music.s(2008)
+    music.o                   music.s(2008)
+    music.o                   music.s(2008)
+pusheax (lpush.o):
+    main.o                    main.s(4013)
+    main.o                    main.s(4013)
+    main.o                    main.s(4013)
+regsave (zeropage.o):
+    main.o                    main.s(10)
+    music.o                   music.s(10)
+shlax4 (aslax4.o):
+    main.o                    main.s(4013)
+    main.o                    main.s(4013)
+shrax1 (shrax1.o):
+    main.o                    main.s(4013)
+shrax4 (shrax4.o):
+    main.o                    main.s(4013)
+    main.o                    main.s(4013)
+sp (zeropage.o):
+    lcmp.o                    runtime/lcmp.s(10)
+    incsp2.o                  runtime/incsp2.s(8)
+    decsp4.o                  runtime/decsp4.s(8)
+    addysp.o                  runtime/addysp.s(8)
+    knes.o                    knes.s(10)
+    crt0.o                    C:\dev\cc65-snapshot-win32\asminc/zeropage.inc(11)
+    sub.o                     runtime/sub.s(9)
+    staxspi.o                 runtime/staxspi.s(9)
+    staspidx.o                runtime/staspidx.s(9)
+    pushax.o                  runtime/pushax.s(8)
+    pusha.o                   runtime/pusha.s(8)
+    or.o                      runtime/or.s(9)
+    lsub.o                    runtime/lsub.s(12)
+    lpush.o                   runtime/lpush.s(12)
+    incsp1.o                  runtime/incsp1.s(8)
+    add.o                     runtime/add.s(11)
+    main.o                    main.s(10)
+sreg (zeropage.o):
+    lcmp.o                    runtime/lcmp.s(10)
+    lsub.o                    runtime/lsub.s(12)
+    lpush.o                   runtime/lpush.s(12)
+    laddeq.o                  runtime/laddeq.s(11)
+    axlong.o                  runtime/axlong.s(8)
+    main.o                    main.s(10)
+staspidx (staspidx.o):
+    music.o                   music.s(2008)
+    music.o                   music.s(2008)
+staxspidx (staxspi.o):
+    music.o                   music.s(2008)
+    music.o                   music.s(2008)
+tmp1 (zeropage.o):
+    copydata.o                common/copydata.s(9)
+    staxspi.o                 runtime/staxspi.s(9)
+    staspidx.o                runtime/staspidx.s(9)
+    shrax4.o                  runtime/shrax4.s(8)
+    shrax1.o                  runtime/shrax1.s(8)
+    or.o                      runtime/or.s(9)
+    asrax4.o                  runtime/asrax4.s(9)
+    asrax3.o                  runtime/asrax3.s(9)
+    aslax4.o                  runtime/aslax4.s(8)
+    aslax3.o                  runtime/aslax3.s(8)
+    aslax2.o                  runtime/aslax2.s(8)
+    main.o                    main.s(11)
+tosadda0 (add.o):
+    music.o                   music.s(2008)
+tosaddax (add.o):
+    music.o                   music.s(2008)
+    music.o                   music.s(2008)
+tosgeeax (lge.o):
+    main.o                    main.s(4013)
+tosgteax (lgt.o):
+    main.o                    main.s(4013)
+toslcmp (lcmp.o):
+    llt.o                     runtime/llt.s(8)
+    lgt.o                     runtime/lgt.s(8)
+    lge.o                     runtime/lge.s(8)
+toslteax (llt.o):
+    main.o                    main.s(4013)
+tosorax (or.o):
+    main.o                    main.s(4013)
+    main.o                    main.s(4013)
+    music.o                   music.s(2008)
+tossuba0 (sub.o):
+    music.o                   music.s(2008)
+tossubax (sub.o):
+    main.o                    main.s(4013)
+    main.o                    main.s(4013)
+tossubeax (lsub.o):
+    main.o                    main.s(4013)
+    main.o                    main.s(4013)
+zerobss (zerobss.o):
+    crt0.o                    crt0.s(9)
+

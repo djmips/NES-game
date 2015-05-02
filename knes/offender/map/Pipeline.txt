@@ -1,0 +1,13 @@
+Hi, I am using this demo as a first pass at building NES software: http://kkfos.aspekt.fi/projects/nes/kne ... -for-cc65/ 
+
+I have these ".fmp" files. The build process in this tutorial is, fmp is working art, the editing tool exports to a ".map" file at content creation time, and possible other files (".met" and ".att"). The build process uses bin2head to convert these to headers. I can open the fmp file in MappyWin32, and export to a .map file. However, my exported .map file is significantly bigger than the demo's .map file (3k to 11k), and the converted header file output ends up significantly larger in size than the demo's. 
+
+I have tried using different export settings in Mappy, but nothing seems to narrow in the results. If I try and re-import the .map files that I exported in Mappy, I get bad data, as well. 
+
+I've browsed through many threads on these forums, and haven't found anything to point me in the right direction yet. 
+
+Mappy is also difficult to Google search. Between the arcade game, and the usage it has for other platforms, I haven't found resources I can use yet. 
+
+For things my development team has solved so far, we have a build process figured out that we can get setup on new PCs quickly, we've learned enough of the quirks of C development on NES to add features like multiple sprites to the demo, we have figured out how to edit the sprite sheet and see our results reflected in-game. Progress has been slow, but rewarding. 
+
+Thanks in advance, we were able to get this far with information available on this forum, and I'm hoping we can keep plowing forward making stupid games for 30 year old hardware in our spare time.
